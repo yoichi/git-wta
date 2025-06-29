@@ -3,7 +3,9 @@
 Add a worktree with opinionated naming convention
 
 It will create new worktree from given commit-ish. The worktree path will be:
-    <the main worktree path>+<given commit-ish>
+```
+<the main worktree path>+<given commit-ish>
+```
 
 If the main worktree is a bare repository, .git suffix in the path will be removed.
 
