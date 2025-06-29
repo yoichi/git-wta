@@ -10,7 +10,7 @@ import (
 
 type WorkingTree struct {
 	fullPath string
-	isBare bool
+	isBare   bool
 }
 
 func getMainWorkingTree() (WorkingTree, error) {
