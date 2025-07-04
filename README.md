@@ -21,6 +21,18 @@ $ git wta <commit-ish>
 $ go install github.com/yoichi/git-wta@latest
 ```
 
+## Shell completion
+
+To enable bash/zsh completion, add the following to your shell settings:
+
+```
+_git_wta ()
+{
+        local dwim_opt="$(__git_checkout_default_dwim_mode)"
+        __git_complete_refs $dwim_opt --mode="refs"
+}
+```
+
 ## License
 
 MIT
