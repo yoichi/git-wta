@@ -42,7 +42,7 @@ func createNewWorkingTree(mainWorkingTree WorkingTree, ref string) error {
 		base = base[:len(base)-len(gitSuffix)]
 	}
 	new := base + "+" + ref
-	add, err := exec.Command("git", "worktree", "add", "--checkout", new, ref).Output()
+	add, err := exec.Command("git", "worktree", "add", new, ref).Output()
 	if err != nil {
 		exitErr, ok := err.(*exec.ExitError)
 		if ok {
